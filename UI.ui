@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1291</width>
+    <height>834</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>291</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Desktop/ObshVid.PNG</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="img_picture">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>291</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Desktop/MainTask.PNG</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>10</y>
+      <width>171</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="m_line"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>m:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="n_line"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>n:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>N макс:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="N_max_line"/>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="eps_line"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>eps:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="omega_line"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>omega:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>641</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <property name="tabBarAutoHide">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="v_list">
+     <attribute name="title">
+      <string>Матрица решений (Vij)</string>
+     </attribute>
+     <widget class="QTableWidget" name="v_table">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>641</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <row>
+       <property name="text">
+        <string>y</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>x</string>
+       </property>
+      </column>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="test_list">
+     <attribute name="title">
+      <string>Решение тестовой задачи</string>
+     </attribute>
+     <widget class="QTableWidget" name="test_table">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>641</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <row>
+       <property name="text">
+        <string>y</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>x</string>
+       </property>
+      </column>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="f_list">
+     <attribute name="title">
+      <string>Значения функции в узлах сетки</string>
+     </attribute>
+     <widget class="QTableWidget" name="f_table">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>641</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <row>
+       <property name="text">
+        <string>y</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>x</string>
+       </property>
+      </column>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="matrix_list">
+     <attribute name="title">
+      <string>Элементы матрицы СЛАУ</string>
+     </attribute>
+     <widget class="QTableWidget" name="matrix_table">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>641</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <row>
+       <property name="text">
+        <string>y</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>x</string>
+       </property>
+      </column>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="right_list">
+     <attribute name="title">
+      <string>Элементы правой части</string>
+     </attribute>
+     <widget class="QTableWidget" name="right_table">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>641</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <row>
+       <property name="text">
+        <string>y</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>x</string>
+       </property>
+      </column>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="solve_button">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>220</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Решить!</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="solve_button_test">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>220</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Решить 
+тестовую задачу</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>10</y>
+      <width>381</width>
+      <height>120</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="horizontalSpacing">
+      <number>15</number>
+     </property>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_11">
+       <property name="text">
+        <string>Достигнута точность</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Оптимальный параметр</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" colspan="2">
+      <widget class="QLabel" name="label_14">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" colspan="2">
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1" colspan="2">
+      <widget class="QLabel" name="label_16">
+       <property name="text">
+        <string>Максимума</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="2">
+      <widget class="QLabel" name="label_12">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_15">
+       <property name="text">
+        <string>Для невязки СЛАУ использовалась норма</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Вставить</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Схема решена с невязкой ||R&lt;span style=&quot; vertical-align:super;&quot;&gt;(n)&lt;/span&gt;||&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string>Затрачено итераций</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>660</y>
+      <width>291</width>
+      <height>104</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_18">
+       <property name="text">
+        <string>X = </string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="4">
+      <widget class="QLabel" name="label_22">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Задача решена с точностью&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" colspan="3">
+      <widget class="QLabel" name="label_24">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="4">
+      <widget class="QLabel" name="label_17">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Максимальное отклонение численных решений &lt;br/&gt;на основной сетке и сетке с половинным шагом в узле:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_23">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;E&lt;span style=&quot; vertical-align:sub;&quot;&gt;1&lt;/span&gt; =&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QLabel" name="label_21">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QLabel" name="label_19">
+       <property name="text">
+        <string>Y =</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLabel" name="label_20">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="4">
+      <widget class="QLabel" name="label_25">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Для основной задачи&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>430</y>
+      <width>621</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout_2">
+     <property name="horizontalSpacing">
+      <number>20</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_26">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Схема (СЛАУ) решена с погрешностью ||Z&lt;span style=&quot; vertical-align:super;&quot;&gt;(N)&lt;/span&gt;||&lt;span style=&quot; vertical-align:sub;&quot;&gt;∞ &lt;/span&gt;&lt;span style=&quot; font-family:'Candara,Raleway,Helvetica Neue,Helvetica,Arial,sans-serif'; font-size:14px; color:#333333; background-color:#eeeeee;&quot;&gt;≤&lt;/span&gt;||Z&lt;span style=&quot; vertical-align:super;&quot;&gt;(N)&lt;/span&gt;||&lt;span style=&quot; vertical-align:sub;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-family:'Candara,Raleway,Helvetica Neue,Helvetica,Arial,sans-serif'; font-size:14px; color:#333333; background-color:#eeeeee;&quot;&gt;≤&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_28">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Погрешность схемы оценивается как||Z||&lt;span style=&quot; vertical-align:sub;&quot;&gt;∞ &lt;/span&gt;&lt;span style=&quot; font-family:'Candara,Raleway,Helvetica Neue,Helvetica,Arial,sans-serif'; font-size:14px; color:#333333; background-color:#eeeeee;&quot;&gt;≤&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="label_29">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_30">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Использована норма ||Z||&lt;span style=&quot; vertical-align:sub;&quot;&gt;∞ &lt;/span&gt;&lt;span style=&quot; font-family:'Candara,Raleway,Helvetica Neue,Helvetica,Arial,sans-serif'; font-size:14px; color:#333333; background-color:#eeeeee;&quot;&gt;≤&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="label_31">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_32">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Общая погрешность решения тестовой  задачи оценивается как ||Z&lt;span style=&quot; vertical-align:sub;&quot;&gt;общ&lt;/span&gt;||&lt;span style=&quot; vertical-align:sub;&quot;&gt;∞ &lt;/span&gt;&lt;span style=&quot; font-family:'Candara,Raleway,Helvetica Neue,Helvetica,Arial,sans-serif'; font-size:14px; color:#333333; background-color:#eeeeee;&quot;&gt;≤&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="label_33">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_34">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Использована норма ||Z&lt;span style=&quot; vertical-align:sub;&quot;&gt;общ&lt;/span&gt;||&lt;span style=&quot; vertical-align:sub;&quot;&gt;∞ &lt;/span&gt;&lt;span style=&quot; font-family:'Candara,Raleway,Helvetica Neue,Helvetica,Arial,sans-serif'; font-size:14px; color:#333333; background-color:#eeeeee;&quot;&gt;≤&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLabel" name="label_35">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_27">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>140</y>
+      <width>251</width>
+      <height>143</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout_3">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_37">
+       <property name="text">
+        <string>Точное решение</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>V</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_38">
+       <property name="text">
+        <string>Начальное приближение</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>V</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_39">
+       <property name="text">
+        <string>Численное решение</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string>V</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_40">
+       <property name="text">
+        <string>Разность точного и численного решения</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="text">
+        <string>V</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="QLabel" name="label_36">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Графики для тестовой задачи&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>140</y>
+      <width>261</width>
+      <height>172</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout_4">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_42">
+       <property name="text">
+        <string>Начальное приближение v</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="text">
+        <string>V</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_43">
+       <property name="text">
+        <string>Начальное приближение v2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="text">
+        <string>V</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_44">
+       <property name="text">
+        <string>Численное решение v</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="text">
+        <string>V</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_46">
+       <property name="text">
+        <string>Численное решение v2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="text">
+        <string>V</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_45">
+       <property name="text">
+        <string>Разность численных решений</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="text">
+        <string>V</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="QLabel" name="label_41">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Графики для основной задачи&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>320</y>
+      <width>521</width>
+      <height>98</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_58">
+       <property name="text">
+        <string>Метод верхней релаксации с параметром</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="label_59">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_60">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Применены критерии остановки по точности&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="label_61">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_62">
+       <property name="text">
+        <string>И по числу итераций N</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="label_63">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="QLabel" name="label_57">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Для контроля точности решения использована сетка с половинным шагом&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>10</y>
+      <width>351</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <property name="horizontalSpacing">
+      <number>15</number>
+     </property>
+     <item row="1" column="1">
+      <widget class="QLabel" name="label_65">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_64">
+       <property name="text">
+        <string>Затрачено итераций</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="QLabel" name="label_79">
+       <property name="text">
+        <string>На решение задачи (СЛАУ) </string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_66">
+       <property name="text">
+        <string>Достигнута точность</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="label_67">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_68">
+       <property name="text">
+        <string>Схема решена с невязкой ||R(n)||</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="label_69">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_80">
+       <property name="text">
+        <string>Для невязки СЛАУ использовалась норма</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLabel" name="label_81">
+       <property name="text">
+        <string>Максимума</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>660</y>
+      <width>271</width>
+      <height>104</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_5">
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_70">
+       <property name="text">
+        <string>X = </string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="4">
+      <widget class="QLabel" name="label_71">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Задача решена с погрешностью&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" colspan="3">
+      <widget class="QLabel" name="label_72">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="4">
+      <widget class="QLabel" name="label_73">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Максимальное отклонение точного и &lt;br/&gt;численного решения наблюдается в узле&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_74">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;E&lt;span style=&quot; vertical-align:sub;&quot;&gt;1&lt;/span&gt; =&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QLabel" name="label_75">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QLabel" name="label_76">
+       <property name="text">
+        <string>Y =</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLabel" name="label_77">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="4">
+      <widget class="QLabel" name="label_78">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Для тестовой задачи&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>570</y>
+      <width>621</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout_6">
+     <property name="horizontalSpacing">
+      <number>20</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_82">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Схема (СЛАУ) решена с погрешностью ||Z&lt;span style=&quot; vertical-align:super;&quot;&gt;(N)&lt;/span&gt;||&lt;span style=&quot; vertical-align:sub;&quot;&gt;∞ &lt;/span&gt;&lt;span style=&quot; font-family:'Candara,Raleway,Helvetica Neue,Helvetica,Arial,sans-serif'; font-size:14px; color:#333333; background-color:#eeeeee;&quot;&gt;≤&lt;/span&gt;||Z&lt;span style=&quot; vertical-align:super;&quot;&gt;(N)&lt;/span&gt;||&lt;span style=&quot; vertical-align:sub;&quot;&gt;2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_83">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_84">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Схема (СЛАУ) на сетке с &lt;br/&gt;половинным шагом решена с погрешностью ||Z&lt;span style=&quot; vertical-align:super;&quot;&gt;(N)&lt;/span&gt;||&lt;span style=&quot; vertical-align:sub;&quot;&gt;∞ &lt;/span&gt;&lt;span style=&quot; font-family:'Candara,Raleway,Helvetica Neue,Helvetica,Arial,sans-serif'; font-size:14px; color:#333333; background-color:#eeeeee;&quot;&gt;≤&lt;/span&gt;||Z&lt;span style=&quot; vertical-align:super;&quot;&gt;(N)&lt;/span&gt;||&lt;span style=&quot; vertical-align:sub;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-family:'Candara,Raleway,Helvetica Neue,Helvetica,Arial,sans-serif'; font-size:14px; color:#333333; background-color:#eeeeee;&quot;&gt;≤&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="label_85">
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1291</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
